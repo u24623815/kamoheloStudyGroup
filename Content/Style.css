@@ -1,0 +1,56 @@
+﻿/* styles for the menu */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 10px;
+}
+
+.menu-item {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    background-color: grey;
+}
+
+.menu-item.active {
+    background-color: blue;
+}
+
+/* Image hover effect (flip) */
+.image-left, .image-right {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.image-left:hover, .image-right:hover {
+    transform: scaleX(-1); /* Flip image horizontally */
+}
+
+.bio, .hobbies, .modules {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .image-left, .image-right {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -17,13 +17,31 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
+                    <!-- Home Link -->
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+
+                    <!-- List of People Link with Submenu -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            List of People
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/HTML/Person1.html">Person 01</a></li>
+                            <li><a class="dropdown-item" href="/HTML/Person2.html">Person 02</a></li>
+                            <li><a class="dropdown-item" href="/HTML/Person3.html">Person 03</a></li>
+                            <li><a class="dropdown-item" href="/HTML/Person4.html">Person 04</a></li>
+                            <li><a class="dropdown-item" href="/HTML/Person5.html">Person 05</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- About and Contact Links -->
                     <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
