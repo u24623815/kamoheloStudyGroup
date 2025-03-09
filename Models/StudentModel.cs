@@ -33,6 +33,10 @@ public int Age { get; set; } = 0;
 [Display(Name = "Living Status")]
 public bool IsAlive { get; set; } = true;
 
+//new property 
+[Display(Name = "My Link")]
+public string myLink { get; set; };
+
     
     }
 }
